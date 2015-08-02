@@ -79,3 +79,7 @@ SOCIAL = { 'Twitter': 'http://twitter.com/kdheepak89',
 GOOGLE_ANALYTICS = 'UA-xxxxxxxx-1'
 MIXPANEL_ANALYTICS = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 ```
+
+# Contribution
+
+Pull requests are welcome!
