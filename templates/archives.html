@@ -1,5 +1,12 @@
 {% extends 'base.html' %}
 
+{% block analytics %}
+{{ super() }}
+<script>
+    mixpanel.track("Page", {"Name": "{{AUTHOR}}", "page": "Archives" });
+</script>
+{% endblock analytics %}
+
 {% block content %}
     <!-- Set your background image for this header on the line below. -->
     <header class="intro-header-article" style="background-color: darkblue;">

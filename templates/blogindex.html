@@ -1,6 +1,13 @@
 {% extends 'base.html' %}
 
 
+{% block analytics %}
+{{ super() }}
+<script>
+    mixpanel.track("Page", {"Name": "Blog" }) ;   
+</script>
+{% endblock analytics %}
+
 {% block content %}
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->

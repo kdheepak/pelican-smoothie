@@ -1,5 +1,12 @@
 {% extends 'base.html' %}
 
+{% block analytics %}
+{{ super() }}
+<script>
+    mixpanel.track("Page", {"Name": "Home Page" }) ;
+</script>
+{% endblock analytics %}
+
 {% block header %}
 <!-- Intro Header -->
 <header class="intro" style="background-image: url('{{COVER_IMG}}'); background-color: darkblue;">
@@ -67,7 +74,7 @@ $(window).scroll(function() {
         $('.fixed-action-btn .btn-large').removeClass('white');
         $('.fixed-action-btn a.btn-large i').addClass('md-light');
         $('.fixed-action-btn a.btn-large i').removeClass('md-dark');
-    } 
+    }
       if ( $('.fixed-action-btn').offset().top < 150 + 150 ) {
         $(".fixed-action-btn").removeClass("scrolled");
         $(".fixed-action-btn a.btn-large").attr("href", "/blog")
