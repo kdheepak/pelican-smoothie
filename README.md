@@ -2,6 +2,8 @@
 
 pelican-smoothie - A Bootstrap theme for the static site generator Pelican
 
+[Live demo](http://kdheepak.com)
+
 ![Screencast](https://raw.githubusercontent.com/kdheepak89/pelican-smoothie/master/screencast.gif)
 
 ### Minimal design
