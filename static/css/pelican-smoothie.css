@@ -513,7 +513,9 @@ a.anchor-link {
         right: auto;
         bottom: auto;
     }
-
+    .fixed-action-btn.scrolled {
+        top: 3em;
+    }
     .intro-header-article .fixed-action-btn {
         top: 2em;
     }
