@@ -509,7 +509,7 @@ a.anchor-link {
 @media(max-width:767px) {
     .fixed-action-btn {
         position: fixed !important;
-        top: 8em;
+        top: 3em;
         right: auto;
         bottom: auto;
     }
