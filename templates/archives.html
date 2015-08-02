@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header-article" style="background-color: darkblue;">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    {% block fab %}
+                      <div class="col-sm-2 fixed-action-btn">
+                        <a href='/blog' class="btn-floating btn-large page-scroll">
+                          <i class="material-icons">keyboard_arrow_left</i>
+                        </a>
+                      </div>
+                    {% endblock fab %}
+                    <div class="col-sm-10 col-sm-offset-2">
+                    <h1 class="article-heading">All Posts</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+<div class="container">
+    <div class="row">
+        {% for year, articles in dates|groupby( 'date.year' )|reverse %}
+            <div class="col-md-10 col-md-offset-2">
+            <h2>{{ year }}</h2>
+            </div>
+            <ul>
+            {% for article in articles %}
+            <div class="col-md-10 col-md-offset-2">
+            <li><a href="{{ article.url }}">{{ article.title }}</a></li>
+            </div>
+            {% endfor %}
+            </ul>
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}
+
+
+{% block jscripts %}
+{{ super() }}
+{% endblock jscripts %}

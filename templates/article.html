@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+<!-- Navigation -->
+
+{% block navbar_arrow %}
+<a class="arrow-left custom-location-at-top" href="/blog"></a>                
+{% endblock navbar_arrow %}
+
+{% block analytics %}
+{{ super() }}
+<script>
+    mixpanel.track("Page", {"Name": "{{article.title}}" }) ;   
+</script>
+{% endblock analytics %}
+
+{% block content %}
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header-article" style="background-image: url('{{ article.post_bg }}');background-color: darkblue;">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    {% block fab %}
+                    <div class="col-sm-2 fixed-action-btn">
+                    <a href='/blog' class="btn-floating btn-large white page-scroll">
+                      <i class="md-dark material-icons">keyboard_arrow_left</i>
+                    </a>
+                    </div>
+                    {% endblock fab %}
+                    <div class="col-sm-10 col-sm-offset-2">
+                    <h1 class="article-heading">{{ article.title }}</h1>
+                        <h2 class="article-subheading">{%if article.subtitle %}{{ article.subtitle }}{% endif %} </h2>
+                        {% include '_includes/last_updated.html' %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Post Content -->
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1">
+                    {{ article.content }}
+                    {% from '_includes/comments.html' import comments with context %}
+                    {{ comments(article) }}
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <hr>
+
+{% endblock content %}
+

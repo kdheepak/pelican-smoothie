@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<!-- Intro Header -->
+<header class="intro" style="background-image: url('{{COVER_IMG}}'); background-color: darkblue;">
+    <div class="intro-body">
+        <div class="container">
+            <div class="row">
+                {% block fab %}
+                  <div class="col-sm-1 fixed-action-btn">
+                    <ul>
+                      <li><a href='#contact' class="page-scroll btn-floating blue"><i class="material-icons">textsms</i></a></li>
+                      <li><a href='#about' class="page-scroll btn-floating green"><i class="material-icons">info_outline</i></a></li>
+                    </ul>
+                    <a href='/blog' class="btn-floating btn-large white page-scroll">
+                      <i class="material-icons md-dark">keyboard_arrow_right</i>
+                    </a>
+                  </div>
+                {% endblock fab %}
+                <div class="col-sm-10 col-sm-offset-1">
+                    <h1 class="brand-heading">{{SITE_TITLE_LABEL}}</h1>
+                    <p class="intro-text">{{SITE_SUBTITLE_LABEL}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+{% endblock header%}
+
+
+{% block navbar_links%}
+{% endblock navbar_links%}
+
+{% block content %}
+{% block about %}
+<!-- About Section -->
+<section id="about" class="container content-section text-center" href="#">
+    <div class="row">
+        <div class="col-lg-10 col-lg-offset-1">
+            <h2>About Me</h2>
+            {{LANDING_PAGE_ABOUT['details']}}
+        </div>
+    </div>
+</section>
+{% endblock about %}
+
+{% block contact %}
+<!-- Contact Section -->
+<section id="contact" class="container content-section text-center" href="#">
+    {% include '_includes/social_links.html' %}
+</section>
+{% endblock contact %}
+{% endblock content %}
+
+{% block jscripts %}
+{{ super() }}
+{% block fabscript %}
+<script>
+// jQuery to change FAB
+$(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+      if (scroll + 150 > $('.fixed-action-btn').offset().top ) {
+        $(".fixed-action-btn").addClass("scrolled");
+        $(".fixed-action-btn a.btn-large").attr("href", "#page-top")
+        $('.fixed-action-btn .btn-large .material-icons').text('keyboard_arrow_up');
+        $('.fixed-action-btn .btn-large').addClass('customcolor');
+        $('.fixed-action-btn .btn-large').removeClass('white');
+        $('.fixed-action-btn a.btn-large i').addClass('md-light');
+        $('.fixed-action-btn a.btn-large i').removeClass('md-dark');
+    } 
+      if ( $('.fixed-action-btn').offset().top < 150 + 150 ) {
+        $(".fixed-action-btn").removeClass("scrolled");
+        $(".fixed-action-btn a.btn-large").attr("href", "/blog")
+        $('.fixed-action-btn .btn-large .material-icons').text('keyboard_arrow_right');
+        $('.fixed-action-btn .btn-large').removeClass('customcolor');
+        $('.fixed-action-btn .btn-large').addClass('white');
+        $('.fixed-action-btn a.btn-large i').removeClass('md-light');
+        $('.fixed-action-btn a.btn-large i').addClass('md-dark');
+    }
+});
+</script>
+{% endblock fabscript %}
+{% endblock jscripts %}
