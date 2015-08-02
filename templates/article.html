@@ -44,9 +44,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1">
+                    <div class="entry-content">
                     {{ article.content }}
-                    {% from '_includes/comments.html' import comments with context %}
-                    {{ comments(article) }}
+                    </div>
+                    {% include '_includes/comments.html' %}
                 </div>
             </div>
         </div>
