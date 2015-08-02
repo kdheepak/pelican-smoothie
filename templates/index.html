@@ -86,5 +86,15 @@ $(window).scroll(function() {
     }
 });
 </script>
+
+<script>
+$(".fixed-action-btn").hover(function(){
+    $('.fixed-action-btn .btn-large .material-icons').text('description');
+    $('.fixed-action-btn.scrolled .btn-large .material-icons').text('keyboard_arrow_up');
+    }, function(){
+        $('.fixed-action-btn .btn-large .material-icons').text('keyboard_arrow_right');
+        $('.fixed-action-btn.scrolled .btn-large .material-icons').text('keyboard_arrow_up');
+});
+</script>
 {% endblock fabscript %}
 {% endblock jscripts %}
