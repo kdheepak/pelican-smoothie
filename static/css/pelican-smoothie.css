@@ -506,6 +506,15 @@ a.anchor-link {
     }
 }
 
+.avatarBox img {
+    object-fit: cover;
+    height: 256px;
+    width: 256px;
+    border-radius: 256px;
+    border: 3px solid white;
+    background-size: cover;
+ }
+
 @media(max-width:767px) {
     .fixed-action-btn {
         position: fixed !important;
