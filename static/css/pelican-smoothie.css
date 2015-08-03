@@ -398,20 +398,21 @@ a:focus {
 
 
 .intro .fixed-action-btn {
-    padding-top: 400px !important;
+    top: 50%;
 }
 .intro .fixed-action-btn.scrolled {
-    padding-top: 75px !important;
+    top: 25%;
 }
 
-.customcolor { background-color: darkblue; }
+.background-color {border-radius: 500px}
+
+.background-color, .customcolor { background-color: darkblue; }
 
 .material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
 .material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
 
 .fixed-action-btn.scrolled {
     position: fixed !important;
-    top: 8em;
     right: auto;
     bottom: auto;
 }
@@ -519,6 +520,9 @@ a.anchor-link {
  }
 
 @media(max-width:767px) {
+
+    .background-color {border-radius: 30px}
+
     .fixed-action-btn {
         position: fixed !important;
         top: 3em;
