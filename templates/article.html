@@ -3,13 +3,13 @@
 <!-- Navigation -->
 
 {% block navbar_arrow %}
-<a class="arrow-left custom-location-at-top" href="/blog"></a>                
+<a class="arrow-left custom-location-at-top" href="/blog"></a>
 {% endblock navbar_arrow %}
 
 {% block analytics %}
 {{ super() }}
 <script>
-    mixpanel.track("Page", {"Name": "{{article.title}}" }) ;   
+    mixpanel.track("Page", {"Name": "{{article.title}}" }) ;
 </script>
 {% endblock analytics %}
 
@@ -28,7 +28,7 @@
                     </a>
                     </div>
                     {% endblock fab %}
-                    <div class="col-sm-10 col-sm-offset-2">
+                    <div class="col-sm-10 col-sm-offset-1">
                     <h1 class="article-heading">{{ article.title }}</h1>
                         <h2 class="article-subheading">{%if article.subtitle %}{{ article.subtitle }}{% endif %} </h2>
                         {% include '_includes/last_updated.html' %}
