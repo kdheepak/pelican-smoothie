@@ -398,6 +398,9 @@ a:focus {
 
 
 .intro .fixed-action-btn {
+    padding-top: 400px !important;
+}
+.intro .fixed-action-btn.scrolled {
     padding-top: 75px !important;
 }
 
