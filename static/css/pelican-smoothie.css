@@ -523,15 +523,6 @@ a.anchor-link {
 
     .background-color {border-radius: 30px}
 
-    .fixed-action-btn {
-        position: fixed !important;
-        top: 3em;
-        right: auto;
-        bottom: auto;
-    }
-    .fixed-action-btn.scrolled {
-        top: 3em;
-    }
     .intro-header-article .fixed-action-btn {
         top: 2em;
     }
