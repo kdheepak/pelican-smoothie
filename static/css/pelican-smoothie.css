@@ -428,7 +428,7 @@ a:focus {
     top: 15%;
 }
 
-.background-color {border-radius: 500px}
+.background-color {border-radius: 50px}
 
 .background-color, .customcolor { background-color: darkblue; }
 
