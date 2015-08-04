@@ -3,7 +3,7 @@
 {% block analytics %}
 {{ super() }}
 <script>
-    mixpanel.track("Page", {"Name": "{{AUTHOR}}", "page": "Archives" });
+mixpanel.track("Page", {"Name": "{{AUTHOR}}", "page": "Archives", "url": "{{output_file}}" });
 </script>
 {% endblock analytics %}
 
