@@ -563,8 +563,6 @@ a.anchor-link {
 
 @media(max-width:767px) {
 
-    .background-color {border-radius: 30px}
-
     .intro-header-article .fixed-action-btn {
         position: fixed !important;
         top: 2em;
