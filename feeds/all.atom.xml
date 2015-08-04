@@ -1,2 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>pelican-smoothie</title><link href="http://kdheepak.com/pelican-smoothie/" rel="alternate"></link><link href="http://kdheepak.com/pelican-smoothie/feeds/all.atom.xml" rel="self"></link><id>http://kdheepak.com/pelican-smoothie/</id><updated>2015-08-04T19:00:00-06:00</updated><entry><title>Pelican Smoothie - My personal theme</title><link href="http://kdheepak.com/pelican-smoothie/blog/pelican-smoothie-my-personal-theme.html" rel="alternate"></link><updated>2015-08-04T19:00:00-06:00</updated><author><name>Dheepak Krishnamurthy</name></author><id>tag:kdheepak.com,2015-08-04:pelican-smoothie/blog/pelican-smoothie-my-personal-theme.html</id><summary type="html">&lt;h1&gt;Features&lt;/h1&gt;</summary><category term="pelican-themes"></category></entry></feed>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>pelican-smoothie</title><link href="http://kdheepak.com/pelican-smoothie/" rel="alternate"></link><link href="http://kdheepak.com/pelican-smoothie/feeds/all.atom.xml" rel="self"></link><id>http://kdheepak.com/pelican-smoothie/</id><updated>2015-08-04T19:00:00-06:00</updated><entry><title>pelican-smoothie - My personal theme</title><link href="http://kdheepak.com/pelican-smoothie/blog/pelican-smoothie-my-personal-theme.html" rel="alternate"></link><updated>2015-08-04T19:00:00-06:00</updated><author><name>Dheepak Krishnamurthy</name></author><id>tag:kdheepak.com,2015-08-04:pelican-smoothie/blog/pelican-smoothie-my-personal-theme.html</id><summary type="html">&lt;p&gt;pelican-smoothie is a minimal Pelican theme that is based on Bootstrap.&lt;/p&gt;
+&lt;h1&gt;Features&lt;/h1&gt;
+&lt;p&gt;&lt;a href="http://kdheepak.com/pelican-smoothie"&gt;Live&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Screencast" src="https://raw.githubusercontent.com/kdheepak89/pelican-smoothie/master/screencast.gif" /&gt;&lt;/p&gt;
+&lt;h3&gt;Minimal design&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="Screenshot" src="https://raw.githubusercontent.com/kdheepak89/pelican-smoothie/master/screenshot1.png" /&gt;&lt;/p&gt;
+&lt;h3&gt;Customizable&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="Screenshot" src="https://raw.githubusercontent.com/kdheepak89/pelican-smoothie/master/screenshot2.png" /&gt;&lt;/p&gt;
+&lt;h3&gt;FAB?&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="Screenshot" src="https://raw.githubusercontent.com/kdheepak89/pelican-smoothie/master/screenshot3.png" /&gt;&lt;/p&gt;
+&lt;h3&gt;Solarized themed code blocks&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="Screenshot" src="https://raw.githubusercontent.com/kdheepak89/pelican-smoothie/master/screenshot4.png" /&gt;&lt;/p&gt;
+&lt;h3&gt;Disqus integration&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="Screenshot" src="https://raw.githubusercontent.com/kdheepak89/pelican-smoothie/master/screenshot5.png" /&gt;&lt;/p&gt;</summary><category term="pelican-themes"></category></entry></feed>
