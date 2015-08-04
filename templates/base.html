@@ -117,8 +117,10 @@
     {% block navigation %}
     {% endblock navigation %}
 
+    <div class="content-block">
     {% block content %}
     {% endblock content %}
+    </div>
 
     {% block footer %}
     <!-- Footer -->
@@ -147,7 +149,7 @@
     // jQuery to change FAB
     $(window).scroll(function() {
             var scroll = $(window).scrollTop();
-          if (scroll > $('.fixed-action-btn').offset().top ) {
+          if (scroll > window.innerHeight/6 ) {
             $(".fixed-action-btn").addClass("scrolled");
             $(".fixed-action-btn a.btn-large").attr("href", "#page-top")
             $('.fixed-action-btn .btn-large .material-icons').text('keyboard_arrow_up');
@@ -165,7 +167,7 @@
             $('.fixed-action-btn a.btn-large i').addClass('md-light');
             $('.fixed-action-btn a.btn-large i').removeClass('md-dark');
         }
-          if ( $('.fixed-action-btn').offset().top < 150 ) {
+          if (scroll < window.innerHeight/6 ) {
             $(".fixed-action-btn").removeClass("scrolled");
             $(".fixed-action-btn a.btn-large").attr("href", "{% block back_link %}/blog{% endblock back_link %}")
             $('.fixed-action-btn .btn-large .material-icons').text({% block keyboard_arrow_direction %}'keyboard_arrow_left'{% endblock keyboard_arrow_direction %});

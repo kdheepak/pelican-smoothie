@@ -2,13 +2,17 @@
  */
 
 body {
-    width: 100%;
-    height: 100%;
+    width: 95%;
+    height: 93.5%;
     font-family: 'EB Garamond', serif;
     font-size: 18px;
     color: #000;
-    background-color: #fff;
+    background-color: #FFF8DC;
+    margin-left: 2.5%;
+    margin-top: 2.5%;
+
 }
+
 
 html {
     width: 100%;
@@ -170,18 +174,34 @@ a:focus {
 }
 
 .intro {
+    margin-top: 2.5em;
+    margin-bottom: 5em;
     display: table;
-    width: 100%;
     height: auto;
-    padding: 100px 0;
+    width: 100%;
     text-align: center;
     color: #fff;
     background: no-repeat bottom center scroll;
-    background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+}
+
+.content-block {
+    margin-top: 2.5%;
+    margin-bottom: 5%;
+    padding-top: 0em;
+    padding-bottom: 5%;
+    background-color:white;
+    -webkit-box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.25);
+    box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.25);
+    border-radius: 25px;
+}
+
+.content-block .index-content-block {
+    padding-top: 2.5em;
 }
 
 .intro-header-article {
@@ -385,23 +405,27 @@ a:focus {
 }
 
 .content-section {
-    padding-top: 0px;
+    padding-top: 100px;
     padding-bottom: 100px;
+}
+
+#about {
+    padding-top: 0px;
 }
 
 .fixed-action-btn {
     position: absolute !important;
-    padding-top: 0px !important;
+    padding-top: 5% !important;
     bottom: auto;
     right: auto;
 }
 
 
 .intro .fixed-action-btn {
-    top: 50%;
+    top: 42.5%;
 }
 .intro .fixed-action-btn.scrolled {
-    top: 25%;
+    top: 15%;
 }
 
 .background-color {border-radius: 500px}
@@ -440,9 +464,27 @@ ul li {
     }
 
 @media(min-width:767px) {
-    .content-section {
+    #about {
         padding-top: 0px;
+    }
+
+    .content-section {
+        padding-top: 250px;
         padding-bottom: 250px;
+    }
+}
+
+.intro-header-article {
+    border-radius: 25px 25px 0px 0px;
+}
+
+.intro-header-article .fixed-action-btn {
+    margin-left: -5%;
+}
+
+@media(min-width:992px){
+    .intro-header-article .fixed-action-btn {
+        margin-left:-7.5%
     }
 }
 
@@ -524,6 +566,7 @@ a.anchor-link {
     .background-color {border-radius: 30px}
 
     .intro-header-article .fixed-action-btn {
+        position: fixed !important;
         top: 2em;
     }
 
