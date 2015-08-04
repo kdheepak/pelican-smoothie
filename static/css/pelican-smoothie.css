@@ -174,9 +174,7 @@ a:focus {
 }
 
 .intro {
-    margin-top: 2.5em;
     margin-bottom: 5em;
-    display: table;
     height: auto;
     width: 100%;
     text-align: center;
@@ -186,6 +184,9 @@ a:focus {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+    background-color: darkblue;
+    padding: 10% 0 10% 0;
+    border-radius: 25px 25px 0px 0px;
 }
 
 .content-block {
@@ -211,9 +212,10 @@ a:focus {
     background-size: cover;
     -o-background-size: cover;
     margin-bottom: 50px;
+    padding: 10rem 0 10rem 0;
+    border-radius: 25px 25px 0px 0px;
 }
 
-.intro-header-article { padding: 10rem 0 10rem 0; }
 .intro-header-article .intro { font-weight: 300; font-size: 1.5rem; color: #81d4fa; }
 .intro-header-article h1 { font-size: 4rem; margin: 0; }
 @media screen and (max-width: 480px) { .intro-header-article h1 { font-size: 2rem; } }
@@ -252,7 +254,6 @@ a:focus {
 @media(min-width:768px) {
     .intro {
         height: 100%;
-        padding: 0;
     }
 
     .intro .intro-body .brand-heading {
@@ -472,10 +473,6 @@ ul li {
         padding-top: 250px;
         padding-bottom: 250px;
     }
-}
-
-.intro-header-article {
-    border-radius: 25px 25px 0px 0px;
 }
 
 .intro-header-article .fixed-action-btn {

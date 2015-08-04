@@ -16,10 +16,9 @@
 {% endblock navbar_links%}
 
 {% block content %}
-<div class=index-content-block>
 <header class="intro" style="background-image: url('{{COVER_IMG}}'); ">
     <div class="intro-body">
-        <div class="container background-color">
+        <div class="container">
             <div class="row">
                 <div class="avatarBox col-sm-12">
                     <img style="background-image: url('{{AVATAR_IMG}}')">
@@ -61,7 +60,6 @@
     {% include '_includes/social_links.html' %}
 </section>
 {% endblock contact %}
-</div>
 {% endblock content %}
 
 {% block jscripts %}
