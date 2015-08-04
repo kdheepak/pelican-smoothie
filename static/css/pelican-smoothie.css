@@ -175,6 +175,7 @@ a:focus {
 
 .intro {
     margin-bottom: 5em;
+    display:table;
     height: auto;
     width: 100%;
     text-align: center;
