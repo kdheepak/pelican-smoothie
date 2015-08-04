@@ -169,7 +169,7 @@
         }
           if (scroll < window.innerHeight/6 ) {
             $(".fixed-action-btn").removeClass("scrolled");
-            $(".fixed-action-btn a.btn-large").attr("href", "{% block back_link %}/blog{% endblock back_link %}")
+            $(".fixed-action-btn a.btn-large").attr("href", "{% block back_link %}{{SITEURL}}/blog{% endblock back_link %}")
             $('.fixed-action-btn .btn-large .material-icons').text({% block keyboard_arrow_direction %}'keyboard_arrow_left'{% endblock keyboard_arrow_direction %});
             $('.fixed-action-btn .btn-large').removeClass('customcolor');
             $('.fixed-action-btn .btn-large').addClass('white');
