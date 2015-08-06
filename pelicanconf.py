@@ -59,10 +59,13 @@ SITE_SUBTITLE_LABEL = "Insert subtitle here!"
 SUMMARY_MAX_LENGTH = 5
 
 STATIC_PATHS = ['images', 'extra/CNAME']
-DIRECT_TEMPLATES = (('index', 'archives',))
+DIRECT_TEMPLATES = (('index', 'archives', 'blog'))
 TAG_SAVE_AS = ''
 AUTHOR_SAVE_AS = ''
 CATEGORY_SAVE_AS = ''
+
+BLOG_URL = 'blog/index.html'
+BLOG_SAVE_AS = 'blog/index.html'
 
 # Legal
 SITE_LICENSE = u'<div>pelican-smoothie is under The MIT License (MIT)</div>'
