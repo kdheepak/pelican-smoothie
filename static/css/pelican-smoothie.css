@@ -59,7 +59,7 @@ img {
 }
 
 a {
-    color: #4A90E2;
+    color: darkblue;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
@@ -68,7 +68,7 @@ a {
 a:hover,
 a:focus {
     text-decoration: none;
-    color: darkblue;
+    color: #092AF6;
 }
 
 .light {
@@ -185,7 +185,7 @@ a:focus {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
-    background-color: #4A90E2;
+    background-color: #03ABF4;
     padding: 50px 0 50px 0;
     border-radius: 25px 25px 0px 0px;
 }
@@ -207,7 +207,7 @@ a:focus {
 }
 
 .intro-header-article {
-    background-color: #4A90E2;
+    background-color: #03ABF4;
  /*   background:  no-repeat bottom center scroll; */
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -218,7 +218,7 @@ a:focus {
     border-radius: 25px 25px 0px 0px;
 }
 
-.intro-header-article .intro { font-weight: 300; font-size: 1.5rem; color: #81d4fa; }
+.intro-header-article .intro { font-weight: 300; font-size: 1.5rem; }
 .intro-header-article h1 { font-size: 4rem; margin: 0; }
 @media screen and (max-width: 480px) { .intro-header-article h1 { font-size: 2rem; } }
 .intro-header-article p { margin: 0; }
@@ -435,13 +435,13 @@ a:focus {
 
 .background-color {border-radius: 50px}
 
-.background-color, .customcolor { background-color: #4A90E2; }
+.background-color, .customcolor { background-color: darkblue; }
 
 .material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
 .material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
 
 .fixed-action-btn.scrolled a:hover {
-    background-color: darkblue
+    background-color: #092AF6;
 }
 .fixed-action-btn.scrolled {
     position: fixed !important;
@@ -503,17 +503,17 @@ ul li {
 }
 
 .btn-default {
-    border: 1px solid #4A90E2;
-    color: #4A90E2;
+    border: 1px solid darkblue;
+    color: darkblue;
     background-color: transparent;
 }
 
 .btn-default:hover,
 .btn-default:focus {
-    border: 1px solid darkblue;
+    border: 1px solid #092AF6;
     outline: 0;
     color: #fff;
-    background-color: darkblue;
+    background-color: #092AF6;
 }
 
 ul.banner-social-buttons {
