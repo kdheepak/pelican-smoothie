@@ -59,7 +59,7 @@ img {
 }
 
 a {
-    color: darkblue;
+    color: #4A90E2;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
@@ -68,7 +68,7 @@ a {
 a:hover,
 a:focus {
     text-decoration: none;
-    color: #1d9b6c;
+    color: darkblue;
 }
 
 .light {
@@ -185,7 +185,7 @@ a:focus {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
-    background-color: darkblue;
+    background-color: #4A90E2;
     padding: 50px 0 50px 0;
     border-radius: 25px 25px 0px 0px;
 }
@@ -207,7 +207,8 @@ a:focus {
 }
 
 .intro-header-article {
-    background:  no-repeat bottom center scroll;
+    background-color: #4A90E2;
+ /*   background:  no-repeat bottom center scroll; */
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -231,6 +232,7 @@ a:focus {
 .intro .intro-body .brand-heading {
     font-size: 40px;
     font-family: 'Nova Round', cursive;
+    color: white;
 }
 
 .intro-header-article .article-heading {
@@ -246,6 +248,7 @@ a:focus {
 .intro .intro-body .intro-text {
     font-size: 18px;
     font-family: 'Permanent Marker', cursive;
+    color: white;
 }
 
 .intro-header-article .article-subheading {
@@ -432,11 +435,14 @@ a:focus {
 
 .background-color {border-radius: 50px}
 
-.background-color, .customcolor { background-color: darkblue; }
+.background-color, .customcolor { background-color: #4A90E2; }
 
 .material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
 .material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
 
+.fixed-action-btn.scrolled a:hover {
+    background-color: darkblue
+}
 .fixed-action-btn.scrolled {
     position: fixed !important;
     right: auto;
@@ -497,8 +503,8 @@ ul li {
 }
 
 .btn-default {
-    border: 1px solid darkblue;
-    color: darkblue;
+    border: 1px solid #4A90E2;
+    color: #4A90E2;
     background-color: transparent;
 }
 
