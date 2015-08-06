@@ -33,6 +33,7 @@ h6 {
 }
 article p {
     text-align: justify;
+    word-break: break-all;
 }
 
 #about p {
