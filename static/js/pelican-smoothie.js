@@ -14,6 +14,10 @@ $(function() {
         }, 1500, 'easeInOutExpo');
         event.preventDefault();
         }
+        else if($anchor.attr('href') == '#search'){
+        $('.search-button').addClass('active')
+        event.preventDefault();
+        }
         else {
         $('html, body').stop().animate({
             scrollTop: $($anchor.attr('href')).offset().top
@@ -22,14 +26,5 @@ $(function() {
         }
     });
 });
-
-
-$("a[href='#top']").click(function() {
-  $("html, body").animate({ scrollTop: 0 }, "slow");
-  return false;
-});
-// Closes the Responsive Menu on Menu Item Click
-$('.navbar-collapse ul li a').click(function() {
-    $('.navbar-toggle:visible').click();
-});
+//
 

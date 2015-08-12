@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {% if SITE_DESCRIPTION %}
     <meta name="description" content="{{ SITE_DESCRIPTION }}" />
-    {% endif %}   
+    {% endif %}
 
     {% if article and article.author %}
     <meta name="author" content="{{ article.author }}" />
@@ -95,7 +95,7 @@
     <!-- Custom CSS -->
     <link href="/theme/css/pelican-smoothie.css" rel="stylesheet">
     <link href="/theme/css/pygment.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/tipuesearch/tipuesearch.css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -111,8 +111,16 @@
 {% block body %}
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
+   {% block search %}
+   <div class="search-button">
+            <form id="search" class="floating-search" action="{{SITE_URL}}/search.html" onsubmit="return validateForm(this.elements['q'].value);">
+            <input type="search" class="search-query" placeholder="Search" name="q"></form>
+       </div>
+    {% endblock search %}
+
     {% block header %}
     {% endblock header%}
+
 
     {% block navigation %}
     {% endblock navigation %}
@@ -142,7 +150,8 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="/theme/js/pelican-smoothie.js"></script>
-    
+    <script type="text/javascript" src="{{ SITEURL }}/theme/tipuesearch/tipuesearch_set.js"></script>
+    <script type="text/javascript" src="{{ SITEURL }}/theme/tipuesearch/tipuesearch.min.js"></script>
     {% block fabscript %}
     <script>
     // jQuery to change FAB
