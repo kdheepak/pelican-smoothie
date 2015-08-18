@@ -6,6 +6,15 @@
 <a class="arrow-left custom-location-at-top" href="/blog"></a>
 {% endblock navbar_arrow %}
 
+{% block meta %}
+    {% if article.tags or article.category or article.keywords %}
+    <meta name="keywords" content="{{ [article.tags|join(', '), article.category, article.keywords]|join(', ') }}" />
+    {% endif %}
+    {% if article.summary %}
+        <meta name="description" content="{{ article.summary|striptags|escape }}" />
+    {% endif %}
+{% endblock %}
+
 {% block analytics %}
 {{ super() }}
 <script>
