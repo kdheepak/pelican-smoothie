@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 
+
 <!-- Navigation -->
 
 {% block navbar_arrow %}
@@ -15,12 +16,17 @@
     {% endif %}
 {% endblock %}
 
+{% block titletag %}
+<title>{{article.title}} - {{SITE_TITLE_LABEL}}</title>
+{% endblock titletag %}
+
 {% block analytics %}
 {{ super() }}
 <script>
     mixpanel.track("Page", {"Name": "{{article.title}}", "url": "{{output_file}}"  }) ;
 </script>
 {% endblock analytics %}
+
 
 {% block header %}
 {% endblock header %}
