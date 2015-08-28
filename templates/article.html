@@ -11,10 +11,15 @@
     {% if article.tags or article.category or article.keywords %}
     <meta name="keywords" content="{{ [article.tags|join(', '), article.category, article.keywords]|join(', ') }}" />
     {% endif %}
+{% endblock %}
+
+
+    {% block description %}
     {% if article.summary %}
         <meta name="description" content="{{ article.summary|striptags|escape }}" />
     {% endif %}
-{% endblock %}
+    {% endblock description %}
+
 
 {% block titletag %}
 <title>{{article.title}} - {{SITE_TITLE_LABEL}}</title>
