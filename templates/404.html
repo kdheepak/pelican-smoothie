@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block analytics %}
+{{ super() }}
+<script>
+mixpanel.track("Page", {"Name": "{{AUTHOR}}", "page": "Not Found", "url": "{{output_file}}" });
+</script>
+{% endblock analytics %}
+
+{% block content %}
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header-article">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    {% block fab %}
+                      <div class="col-sm-2 fixed-action-btn">
+                        <a href='{{SITEURL}}/blog' class="btn-floating btn-large white page-scroll">
+                          <i class="md-dark material-icons">keyboard_arrow_left</i>
+                        </a>
+                      </div>
+                    {% endblock fab %}
+                    <div class="col-sm-10 col-sm-offset-2">
+                    <h1 class="article-heading">Post Not Found</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+<div class="container">
+    <div class="row">
+
+            <div class="col-md-10 col-md-offset-2">
+    The page you were looking for was not found. Do you want to try looking below instead?
+            </div>
+
+        {% for year, articles in dates|groupby( 'date.year' )|reverse %}
+            <div class="col-md-10 col-md-offset-2">
+            <h2>{{ year }}</h2>
+            </div>
+            <ul>
+            {% for article in articles %}
+            <div class="col-md-10 col-md-offset-2">
+            <li><a href="{{SITEURL}}/{{ article.url }}">{{ article.title }}</a></li>
+            </div>
+            {% endfor %}
+            </ul>
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}
+
+
+{% block jscripts %}
+{{ super() }}
+{% endblock jscripts %}
