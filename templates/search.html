@@ -3,6 +3,10 @@
 
 {% block content %}
 <div class="entry-content">
+
+<div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js">
     </script>
     <script type="text/javascript" src="{{ SITEURL }}/theme/tipuesearch/tipuesearch_set.js"></script>
@@ -16,8 +20,36 @@
                 });
             });
         </script>
-    <div align="center"><input type="text" size="60" id="tipue_search_input">
-        <input type="button" id="tipue_search_button" value="Search"></div>
+   {% block search %}
+   <div class="search-button" style="display: block;">
+            <form id="search" class="floating-search" action="{{SITE_URL}}/search.html" onsubmit="return validateForm(this.elements['q'].value);">
+            <input type="search" class="search-query" placeholder="Search" name="q"></form>
+       </div>
+    {% endblock search %}
+    <div align="center">
+        <input type="text" size="60" id="tipue_search_input" style="display: none;">
+        <input type="button" id="tipue_search_button" value="Search" style="display: none;">
+    </div>
     <div id="tipue_search_content"></div>
 </div>
+
+</div>
+</div>
+</div>
+
 {% endblock content %}
+
+
+            {% for article in dates %}
+            <div class="post-preview">
+                    <a class="blog-index-title" href="{{ SITEURL }}/{{ article.url }}"><h1 class="post-title">{{ article.title }}</h2>
+                    {%if article.subtitle %} <h2 class="post-subtitle">{{ article.subtitle }} </h3>{% endif %} </a>
+                    <p class="post-meta">Posted on <time pubdate="pubdate" datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time></p>
+                </div>
+              <div class="entry-content">{{ article.summary }}</div>
+                <a rel="full-article" href="{{ SITEURL }}/{{ article.url }}" class="waves-effect waves-light btn btn-default"><i class="material-icons right"></i>Read On</a>
+            {% endfor %}
+           </div>
+        </div>
+    </div>
+
