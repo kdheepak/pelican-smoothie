@@ -33,6 +33,7 @@
                       <li><a href='#search' class="page-scroll btn-floating customcolor"><i class="material-icons">search</i></a></li>
                       <li><a href='#contact' class="page-scroll btn-floating customcolor"><i class="material-icons">textsms</i></a></li>
                       <li><a href='#about' class="page-scroll btn-floating customcolor"><i class="material-icons">info_outline</i></a></li>
+                      <li><a href='#projects' class="page-scroll btn-floating customcolor"><i class="material-icons">dashboard</i></a></li>
                     </ul>
                     <a href='{{SITEURL}}/blog' class="btn-floating btn-large white page-scroll">
                       <i class="material-icons md-dark">keyboard_arrow_right</i>
@@ -61,6 +62,14 @@
     {% include '_includes/social_links.html' %}
 </section>
 {% endblock contact %}
+
+{% block projects %}
+<!-- Contact Section -->
+<section id="projects" class="container content-section text-center" href="#">
+    {% include '_includes/projects.html' %}
+</section>
+{% endblock projects %}
+
 {% endblock content %}
 
 {% block jscripts %}
