@@ -715,5 +715,7 @@ div[aria-expanded="true"] {
    background-color: black;
 }
 
-
+#notebook-container {
+    width: 100%;
+}
 
