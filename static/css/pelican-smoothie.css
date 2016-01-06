@@ -27,10 +27,29 @@ h5,
 h6 {
     font-family: 'Lobster Two', cursive;
     margin: 50px 0 25px;
-    font-size: 2em;
     font-weight: 700;
     letter-spacing: 1px;
 }
+
+h1 {
+    font-size: 2em;
+}
+h2 {
+    font-size: 1.5em;
+}
+h3 {
+    font-size: 1em;
+}
+h4 {
+    font-size: 2em;
+}
+h5 {
+    font-size: 2em;
+}
+h5 {
+    font-size: 2em;
+}
+
 article p {
     text-align: justify;
     -ms-word-break: break-word;
