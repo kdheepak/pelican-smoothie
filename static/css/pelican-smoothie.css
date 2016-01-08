@@ -70,7 +70,8 @@ p {
 }
 
 img {
-    margin: 10px 0 50px 0;
+    display: block;
+    margin: 0 auto;
     max-width: 100%;
 }
 
