@@ -84,10 +84,10 @@
         src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
         </script>
     <!-- Bootstrap Core CSS -->
-    <link href="/theme/css/bootstrap.min.css" rel="stylesheet">
+    <link href="theme/css/bootstrap.min.css" rel="stylesheet">
 
          <!-- Compiled and minified CSS -->
-     <link rel="stylesheet" href="/theme/css/materialize.min.css">
+     <link rel="stylesheet" href="theme/css/materialize.min.css">
 
      <!-- Compiled and minified JavaScript -->
      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
@@ -103,9 +103,9 @@
     <link href='http://fonts.googleapis.com/css?family=Permanent+Marker|Pacifico|Nova+Round|EB+Garamond|Kaushan+Script' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Lobster+Two' rel='stylesheet' type='text/css'>
     <!-- Custom CSS -->
-    <link href="/theme/css/pelican-smoothie.css" rel="stylesheet">
-    <link href="/theme/css/pygment.css" rel="stylesheet">
-    <link rel="stylesheet" href="{{ SITEURL }}/theme/tipuesearch/tipuesearch.css">
+    <link href="theme/css/pelican-smoothie.css" rel="stylesheet">
+    <link href="theme/css/pygment.css" rel="stylesheet">
+    <link rel="stylesheet" href="theme/tipuesearch/tipuesearch.css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -187,7 +187,7 @@
         }
           if (scroll < window.innerHeight/6 ) {
             $(".fixed-action-btn").removeClass("scrolled");
-            $(".fixed-action-btn a.btn-large").attr("href", "{% block back_link %}{{SITEURL}}/blog{% endblock back_link %}")
+            $(".fixed-action-btn a.btn-large").attr("href", "{% block back_link %}{{SITEURL}}/{% endblock back_link %}")
             $('.fixed-action-btn .btn-large .material-icons').text({% block keyboard_arrow_direction %}'keyboard_arrow_left'{% endblock keyboard_arrow_direction %});
             $('.fixed-action-btn .btn-large').removeClass('customcolor');
             $('.fixed-action-btn .btn-large').addClass('white');

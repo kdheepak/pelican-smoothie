@@ -3,111 +3,51 @@
 {% block analytics %}
 {{ super() }}
 <script>
-    mixpanel.track("Page", {"Name": "Home Page", "url": "{{output_file}}"  }) ;
+    mixpanel.track("Page", {"Name": "Blog", "url": "{{output_file}}" }) ;
 </script>
 {% endblock analytics %}
 
-{% block header %}
-<!-- Intro Header -->
-{% endblock header%}
-
-
-{% block navbar_links%}
-{% endblock navbar_links%}
-
 {% block content %}
-<header class="intro" style="background-image: url('{{COVER_IMG}}'); ">
-    <div class="intro-body">
-        <div class="container">
-            <div class="row">
-                <div class="avatarBox col-sm-12">
-                    <img style="background-image: url('{{AVATAR_IMG}}')">
-                </div>
-                <div class="col-sm-12">
-                    <h1 class="brand-heading">{{SITE_TITLE_LABEL}}</h1>
-                    <p class="intro-text">{{SITE_SUBTITLE_LABEL}}</p>
-                </div>
-                {% block fab %}
-                  <div class="col-sm-1 fixed-action-btn">
-                    <ul>
-                      <li><a href='#search' class="page-scroll btn-floating customcolor"><i class="material-icons">search</i></a></li>
-                      <li><a href='#contact' class="page-scroll btn-floating customcolor"><i class="material-icons">textsms</i></a></li>
-                      <li><a href='#about' class="page-scroll btn-floating customcolor"><i class="material-icons">info_outline</i></a></li>
-                      <li><a href='#projects' class="page-scroll btn-floating customcolor"><i class="material-icons">dashboard</i></a></li>
-                    </ul>
-                    <a href='{{SITEURL}}/blog' class="btn-floating btn-large white page-scroll">
-                      <i class="material-icons md-dark">keyboard_arrow_right</i>
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header-article">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    {% block fab %}
+                    <div class="col-sm-2 fixed-action-btn">
+                        <a href='http://kdheepak.com/' class="btn-floating btn-large white page-scroll">
+                      <i class="md-dark material-icons">keyboard_arrow_left</i>
                     </a>
-                  </div>
-                {% endblock fab %}
+                    </div>
+                    {% endblock fab %}
+                    <div class="col-sm-10 col-sm-offset-2">
+                    <h1 class="article-heading">Blog</h1>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</header>
-{% block about %}
-<!-- About Section -->
-<section id="about" class="container content-section text-center" href="#">
-    <div class="row">
-        <div class="col-lg-10 col-lg-offset-1">
-            <h2>About Me</h2>
-            {{LANDING_PAGE_ABOUT['details']}}
+    </header>
+
+<div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            {% for article in dates %}
+            <div class="post-preview">
+                    <a class="blog-index-title" href="{{ SITEURL }}/{{ article.url }}"><h1 class="post-title">{{ article.title }}</h2>
+                    {%if article.subtitle %} <h2 class="post-subtitle">{{ article.subtitle }} </h3>{% endif %} </a>
+                    <p class="post-meta">Posted on <time pubdate="pubdate" datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time></p>
+                </div>
+              <div class="entry-content">{{ article.summary }}</div>
+                <a rel="full-article" href="{{ SITEURL }}/{{ article.url }}" class="waves-effect waves-light btn btn-default"><i class="material-icons right"></i>Read On</a>
+            {% endfor %}
+           </div>
         </div>
     </div>
-</section>
-{% endblock about %}
-
-{% block contact %}
-<!-- Contact Section -->
-<section id="contact" class="container content-section text-center" href="#">
-    {% include '_includes/social_links.html' %}
-</section>
-{% endblock contact %}
-
-{% block projects %}
-<!-- Contact Section -->
-<section id="projects" class="container content-section text-center" href="#">
-    {% include '_includes/projects.html' %}
-</section>
-{% endblock projects %}
-
 {% endblock content %}
 
 {% block jscripts %}
-{{ super() }}
-{% block fabscript %}
-<script>
-// jQuery to change FAB
-$(window).scroll(function() {
-        var scroll = $(window).scrollTop();
-      if (scroll > window.innerHeight/4 ) {
-        $(".fixed-action-btn").addClass("scrolled");
-        $(".fixed-action-btn a.btn-large").attr("href", "#page-top")
-        $('.fixed-action-btn .btn-large .material-icons').text('keyboard_arrow_up');
-        $('.fixed-action-btn .btn-large').addClass('customcolor');
-        $('.fixed-action-btn .btn-large').removeClass('white');
-        $('.fixed-action-btn a.btn-large i').addClass('md-light');
-        $('.fixed-action-btn a.btn-large i').removeClass('md-dark');
-    }
-      if (scroll < window.innerHeight/4  ) {
-        $(".fixed-action-btn").removeClass("scrolled");
-        $(".fixed-action-btn a.btn-large").attr("href", "{{SITEURL}}/blog")
-        $('.fixed-action-btn .btn-large .material-icons').text('keyboard_arrow_right');
-        $('.fixed-action-btn .btn-large').removeClass('customcolor');
-        $('.fixed-action-btn .btn-large').addClass('white');
-        $('.fixed-action-btn a.btn-large i').removeClass('md-light');
-        $('.fixed-action-btn a.btn-large i').addClass('md-dark');
-    }
-});
-</script>
-
-<script>
-$(".fixed-action-btn").hover(function(){
-    $('.fixed-action-btn .btn-large .material-icons').text('description');
-    $('.fixed-action-btn.scrolled .btn-large .material-icons').text('keyboard_arrow_up');
-    }, function(){
-        $('.fixed-action-btn .btn-large .material-icons').text('keyboard_arrow_right');
-        $('.fixed-action-btn.scrolled .btn-large .material-icons').text('keyboard_arrow_up');
-});
-</script>
-{% endblock fabscript %}
+{{super()}}
 {% endblock jscripts %}
+
+{% block back_link %}/{% endblock back_link %}
