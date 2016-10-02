@@ -41,6 +41,14 @@
     <title>{{SITE_TITLE_LABEL}}</title>
     {% endblock titletag %}
 
+    {% if article %}
+        {% if article.stylesheets %}
+            {% for stylesheet in article.stylesheets %}
+    {{ stylesheet }}
+            {% endfor %}
+        {% endif %}
+    {% endif %}
+
     <!-- iPython Notebook script -->
     <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
             <script type="text/javascript">
@@ -201,5 +209,14 @@
 
 </body>
 {% endblock body %}
+
+{% if article %}
+    {% if article.javascripts %}
+        {% for javascript in article.javascripts %}
+{{ javascript }}
+        {% endfor %}
+    {% endif %}
+{% endif %}
+
 </html>
 
