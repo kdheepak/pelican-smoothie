@@ -28,3 +28,13 @@ $(function() {
 });
 //
 
+function getVerticalOffset(element) { var bodyRect = document.body.getBoundingClientRect(),
+    elemRect = element.getBoundingClientRect(),
+    offset   = elemRect.top - bodyRect.top;
+return offset }
+
+var elements = document.getElementsByTagName("aside");
+for(var i=0; i<elements.length; i++) {
+    offset = getVerticalOffset(elements[i]) - getVerticalOffset(document.getElementById(elements[i].id));
+    elements[i].style.marginTop = (-1*offset) + 'px'
+}
