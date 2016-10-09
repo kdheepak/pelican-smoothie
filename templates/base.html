@@ -41,14 +41,6 @@
     <title>{{SITE_TITLE_LABEL}}</title>
     {% endblock titletag %}
 
-    {% if article %}
-        {% if article.stylesheets %}
-            {% for stylesheet in article.stylesheets %}
-    {{ stylesheet }}
-            {% endfor %}
-        {% endif %}
-    {% endif %}
-
     <!-- iPython Notebook script -->
     <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
             <script type="text/javascript">
@@ -91,6 +83,20 @@
         <script type="text/javascript"
         src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
         </script>
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic|Source+Code+Pro|Source+Sans+Pro:200,300,400,600,400italic,600italic|Rock+Salt" rel="stylesheet" type="text/css">
+    <link href="/theme/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="theme/css/solarized-light.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
     <!-- Bootstrap Core CSS -->
     <link href="theme/css/bootstrap.min.css" rel="stylesheet">
 
@@ -100,19 +106,9 @@
      <!-- Compiled and minified JavaScript -->
      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
 
-    <!-- Custom Fonts -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="http://fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic|Source+Code+Pro|Source+Sans+Pro:200,300,400,600,400italic,600italic|Rock+Salt" rel="stylesheet" type="text/css">
-    <link href="/theme/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <!-- Custom CSS -->
     <link href="theme/css/pelican-smoothie.css" rel="stylesheet">
-    <link href="theme/css/pygment.css" rel="stylesheet">
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+
     {% block analytics %}
     {% include '_includes/analytics.html' %}
     {% endblock analytics %}
@@ -193,13 +189,5 @@
 
 </body>
 {% endblock body %}
-
-{% if article %}
-    {% if article.javascripts %}
-        {% for javascript in article.javascripts %}
-{{ javascript }}
-        {% endfor %}
-    {% endif %}
-{% endif %}
 
 </html>
