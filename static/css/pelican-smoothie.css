@@ -89,6 +89,7 @@ article p {
 }
 
 aside {
+  margin-top: 0px;
   color: #868279;
   padding: 10px 10px;
   background: #faf8f5;

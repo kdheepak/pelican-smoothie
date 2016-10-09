@@ -36,5 +36,30 @@ return offset }
 var elements = document.getElementsByTagName("aside");
 for(var i=0; i<elements.length; i++) {
     offset = getVerticalOffset(elements[i]) - getVerticalOffset(document.getElementById(elements[i].id));
-    elements[i].style.marginTop = (-1*offset) + 'px'
+    if ($( window ).width() >= 800) {
+        if (offset > 0) {
+            elements[i].style.marginTop = (-1*offset) + 'px'
+        }
+    }
+    else  {
+        elements[i].style.marginTop = 0 + 'px'
+    }
 }
+
+$( window ).resize(function() {
+
+    var elements = document.getElementsByTagName("aside");
+    for(var i=0; i<elements.length; i++) {
+        offset = getVerticalOffset(elements[i]) - getVerticalOffset(document.getElementById(elements[i].id));
+        if ($( window ).width() >= 800) {
+            if (offset > 0) {
+                elements[i].style.marginTop = (-1*offset) + 'px'
+            }
+        }
+        else  {
+            elements[i].style.marginTop = 0 + 'px'
+        }
+    }
+
+
+});
