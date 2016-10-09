@@ -59,14 +59,14 @@ div.entry-content {
 }
 
 .entry-content h1 {
-    font: 300 35px "Source Sans Pro", Georgia, serif;
+    font: 300 40px "Source Sans Pro", Georgia, serif;
 }
 .entry-content h2,
 .comments h2 {
-    font: 300 25px "Source Sans Pro", Georgia, serif;
+    font: 300 30px "Source Sans Pro", Georgia, serif;
 }
 .entry-content h3 {
-    font: 300 15px "Source Sans Pro", Georgia, serif;
+    font: 300 20px "Source Sans Pro", Georgia, serif;
 }
 
 
@@ -79,7 +79,7 @@ div.entry-content {
 }
 
 article p {
-    text-align: justify;
+    /*text-align: justify;*/
     -ms-word-break: break-word;
      /* Non standard for webkit */
      word-break: break-word;
