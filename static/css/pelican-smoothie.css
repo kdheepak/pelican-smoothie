@@ -10,7 +10,7 @@ body {
     line-height: 24px;
     color: #222;
     font: normal 14px/24px "Merriweather", Georgia, sanserif;
-    background: #FBFAF8;
+    background: #e8e6e3;
 }
 
 
@@ -138,6 +138,7 @@ aside {
         font: 14px/20px "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif;
         }
     }
+}
 
 #about p {
     text-align: justify;
@@ -292,8 +293,8 @@ a:focus {
 }
 
 .content-block {
-    margin-top: 2.5%;
-    margin-bottom: 5%;
+    /*margin-top: 2.5%;
+    margin-bottom: 5%;*/
     /*padding-top: 0em;
     padding-bottom: 5%;*/
     background-color:white;
