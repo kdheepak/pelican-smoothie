@@ -28,38 +28,24 @@ $(function() {
 });
 //
 
-function getVerticalOffset(element) { var bodyRect = document.body.getBoundingClientRect(),
-    elemRect = element.getBoundingClientRect(),
-    offset   = elemRect.top - bodyRect.top;
-return offset }
-
 var elements = document.getElementsByTagName("aside");
 for(var i=0; i<elements.length; i++) {
-    offset = getVerticalOffset(elements[i]) - getVerticalOffset(document.getElementById(elements[i].id));
     if ($( window ).width() >= 800) {
-        if (offset > 0) {
-            elements[i].style.marginTop = (-1*offset) + 'px'
-        }
+        $(elements[i]).css({'margin-top': -$(elements[i]).height()})
     }
-    else  {
-        elements[i].style.marginTop = 0 + 'px'
+    else {
+        $(e).css({'margin-top': 0})
     }
 }
 
 $( window ).resize(function() {
-
     var elements = document.getElementsByTagName("aside");
     for(var i=0; i<elements.length; i++) {
-        offset = getVerticalOffset(elements[i]) - getVerticalOffset(document.getElementById(elements[i].id));
         if ($( window ).width() >= 800) {
-            if (offset > 0) {
-                elements[i].style.marginTop = (-1*offset) + 'px'
-            }
+            $(elements[i]).css({'margin-top': -$(elements[i]).height()})
         }
-        else  {
-            elements[i].style.marginTop = 0 + 'px'
+        else {
+            $(e).css({'margin-top': 0})
         }
     }
-
-
 });
