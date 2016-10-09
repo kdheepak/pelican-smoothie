@@ -34,12 +34,10 @@
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             {% for article in dates %}
             <div class="post-preview">
-                    <a class="blog-index-title" href="{{ SITEURL }}/{{ article.url }}"><h1 class="post-title">{{ article.title }}</h2>
-                    {%if article.subtitle %} <h2 class="post-subtitle">{{ article.subtitle }} </h3>{% endif %} </a>
-                    <p class="post-meta">Posted on <time pubdate="pubdate" datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time></p>
-                </div>
-              <div class="entry-content">{{ article.summary }}</div>
-                <a rel="full-article" href="{{ SITEURL }}/{{ article.url }}" class="waves-effect waves-light btn btn-default"><i class="material-icons right"></i>Read On</a>
+                <i class="fa fa-hashtag" aria-hidden="true"></i>
+                <a class="blog-index-title" href="{{ SITEURL }}/{{ article.url }}"><h1 class="post-title">{{ article.title }}</h2> </a>
+                <!-- <p class="post-meta"><time pubdate="pubdate" datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time></p> -->
+            </div>
             {% endfor %}
            </div>
         </div>

@@ -44,17 +44,17 @@
         <div class="intro-body">
             <div class="container">
                 <div class="row">
-                    {% block fab %}
-                    <div class="col-sm-2 fixed-action-btn">
-                    <a href='{{SITEURL}}/' class="btn-floating btn-large white page-scroll">
-                      <i class="md-dark material-icons">keyboard_arrow_left</i>
-                    </a>
-                    </div>
-                    {% endblock fab %}
                     <div class="col-sm-10 col-sm-offset-1">
-                    <h1 class="article-heading">{{ article.title }}</h1>
-                        <h2 class="article-subheading">{%if article.subtitle %}{{ article.subtitle }}{% endif %} </h2>
+                    <h1 class="article-heading">
+                        {{ article.title }}
+                    </h1>
+                    <h2 class="article-subheading">
+                        {%if article.subtitle %}
+                            {{ article.subtitle }}
+                        {% endif %}
+                        <p><span class='author'><a href="{{ SITEURL }}">{{article.author}}</a></span></p>
                         {% include '_includes/last_updated.html' %}
+                    </h2>
                     </div>
                 </div>
             </div>
@@ -65,7 +65,7 @@
     <article>
         <div class="container">
             <div class="row">
-                <div class="col-lg-10 col-lg-offset-1">
+                <div class="col-sm-10 col-sm-offset-1">
                     <div class="entry-content">
                     {{ article.content }}
                     </div>
@@ -78,4 +78,3 @@
     <hr>
 
 {% endblock content %}
-
