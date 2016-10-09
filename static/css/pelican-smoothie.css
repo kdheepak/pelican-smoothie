@@ -88,6 +88,57 @@ article p {
     hyphens: auto;
 }
 
+aside {
+  color: #868279;
+  padding: 10px 10px;
+  background: #faf8f5;
+  border: solid 1px #f7f4ed;
+  border-bottom: solid 1px #f0e9db;
+  border-radius: 3px; }
+  aside h2 {
+    color: #9e9b94;
+    font-size: 24px;
+    border: none;
+    margin: 20px 0 10px 0;
+    padding: 0; }
+  aside p, aside li {
+    font: 15px/22px "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif; }
+  aside li {
+    line-height: 20px; }
+  aside > p:first-child {
+    margin-top: 0; }
+  aside > p:last-child {
+    margin-bottom: 0; }
+  aside ul, aside ol {
+    padding: 0 0 0 18px; }
+  aside code {
+    color: #666;
+    font: normal 13px "Source Code Pro", Menlo, Consolas, Monaco, monospace; }
+  aside img {
+    padding: 0; }
+
+aside + aside {
+  margin-top: 10px; }
+
+@media only screen and (min-width: 800px) {
+.page {
+  padding-right: 300px; }
+
+aside {
+    position: absolute;
+    /* height: 100px; */
+    border-radius: 0;
+    border-left: solid 8px #f0e9db;
+    margin-top: -height;
+    margin-top: -24%;
+    margin-right: -50%;
+    margin-left: 100%;
+    padding-left: 22px;
+    aside p, aside li {
+        font: 14px/20px "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif;
+        }
+    }
+
 #about p {
     text-align: justify;
 }
