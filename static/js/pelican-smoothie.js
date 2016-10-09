@@ -34,7 +34,7 @@ for(var i=0; i<elements.length; i++) {
         $(elements[i]).css({'margin-top': -$(elements[i]).height()})
     }
     else {
-        $(e).css({'margin-top': 0})
+        $(elements[i]).css({'margin-top': 0})
     }
 }
 
@@ -45,7 +45,7 @@ $( window ).resize(function() {
             $(elements[i]).css({'margin-top': -$(elements[i]).height()})
         }
         else {
-            $(e).css({'margin-top': 0})
+            $(elements[i]).css({'margin-top': 0})
         }
     }
 });
