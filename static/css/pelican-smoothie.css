@@ -280,7 +280,7 @@ a:focus {
 }
 
 .intro {
-    margin-bottom: 5em;
+    /*margin-bottom: 5em;*/
     height: auto;
     width: 100%;
     text-align: center;
@@ -317,7 +317,7 @@ a:focus {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
-    margin-bottom: 50px;
+    /*margin-bottom: 50px;*/
     /*padding: 10rem 0 10rem 0;*/
     border-radius: 25px 25px 0px 0px;
     background-color: white;
