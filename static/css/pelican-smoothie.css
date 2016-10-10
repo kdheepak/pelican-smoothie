@@ -13,6 +13,9 @@ body {
     background: #e8e6e3;
 }
 
+.hljs {
+    white-space: pre;
+}
 
 html {
     width: 100%;
