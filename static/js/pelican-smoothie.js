@@ -28,24 +28,46 @@ $(function() {
 });
 //
 
-var elements = document.getElementsByTagName("aside");
-for(var i=0; i<elements.length; i++) {
-    if ($( window ).width() >= 800) {
-        $(elements[i]).css({'margin-top': -$(elements[i]).height()})
-    }
-    else {
-        $(elements[i]).css({'margin-top': 0})
-    }
-}
 
-$( window ).resize(function() {
-    var elements = document.getElementsByTagName("aside");
-    for(var i=0; i<elements.length; i++) {
-        if ($( window ).width() >= 800) {
-            $(elements[i]).css({'margin-top': -$(elements[i]).height()})
-        }
-        else {
-            $(elements[i]).css({'margin-top': 0})
-        }
-    }
+
+$(document).ready(function() {
+  $(window).resize(refreshAsides);
+
+  // Since we may not have the height correct for the images, adjust the asides
+  // too when an image is loaded.
+  $('img').load(function() {
+    refreshAsides();
+  });
+
+  // On the off chance the browser supports the new font loader API, use it.
+  if (document.fontloader) {
+    document.fontloader.notifyWhenFontsReady(function() {
+      refreshAsides();
+    });
+  }
+
+  // Lame. Just do another refresh after a second when the font is *probably*
+  // loaded to hack around the fact that the metrics changed a bit.
+  window.setTimeout(refreshAsides, 200);
+  refreshAsides();
 });
+
+function refreshAsides() {
+  // Don't position them if they're inline.
+  if ($(document).width() < 800) return;
+
+  // Vertically position the asides next to the span they annotate.
+  $("aside").each(function() {
+    var aside = $(this);
+
+    // Find the span the aside should be anchored next to.
+    var name = aside.attr("id");
+    var span = $("span[id='" + name + "']");
+    if (span == null) {
+      window.console.log("Could not find span for '" + name + "'");
+      return;
+    }
+
+    aside.css({top: span.position().top - 3});
+  });
+}
